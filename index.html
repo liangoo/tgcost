@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天工造价网-Ui规范</title>
+    <link rel="stylesheet" href="css/libCss.css">
+    <style>
+        .h1-sub {font-size: 12px; opacity: .8; margin-left: 20px;}
+        .grid > .row {margin-top: 20px;}
+        .p10-50 { padding: 10px 50px;}
+        .ml100 {margin-left: 100px;}
+        .col-10 h3 {color: #333;}
+        .col-10 > p {padding: 5px 20px; text-indent:2em; line-height: 24px; font-size: 14px;}
+        .col-10 > h4 {padding: 5px 20px; font-weight: bold;}
+        .col-10 > h4 sub { position: absolute; margin: 4px 0 0 10px; padding-left: 10px; color: #ccc; border-left: 1px #ddd solid;}
+        .col-2 ul li a {color: #666; transition: all 0.5s;}
+        .col-2 ul li a:hover,.col-2 ul li.on a {font-weight: bold; margin-left: 10px;}
+        .col-2 ul li.on a {color: #008ad2;}
+    </style>
+</head>
+<body style="background: #f6f6f6;">
+    <h1 class="tac fcf p10 bgc-blu">天工造价网-Ui规范<sub class="h1-sub">version 1.0 梁建松</sub></h1>
+    <div class="grid">
+        <div class="row">
+            <!-- 左栏 { -->
+            <div class="col-10 mr20 p20 bd1 bgcf ra3 fc6 spy-div bgcf">
+                <h1 class="tac m10 fc-blu">1.Ui规范介绍</h1>
+                <hr>
+                <h3 id="spy1-1">1.1 UI设计规范是什么</h3>
+                <p>UI设计规范，是指由UI设计师制定的，对配色、字体、元素间距、控件尺寸、页面布局等可复用设计规则的提炼和约束，用于指导后
+				续的设计工作。制作UI设计规范是一件看起来非常容易的事情，一个psd文件、一个pdf，甚至一个ppt文件都可以作为设计规范的载体。
+                </p>
+                <p>然而UI规范的逐渐完善、坚持在产品中推行，以及整个团队切实意识到规范的必要性，则是需要UI设计师多年积累的一个过程。
+				</p>
+                <h3 id="spy1-2">1.2 设计规范的价值</h3>
+                <p>UI设计规范是一份在团队协作中，对降低沟通成本、提高设计效率、保持产品或品牌设计风格一致而言非常重要的文档，团队越大，
+				规范的重要性就越发凸显。对开发而言，可以便于开发同学准确地还原样式、增强控件的复用性。对设计师团队而言，便于向新介入项目
+				的同事介绍项目概况、帮助其迅速上手项目。对公司品牌而言，则有助于向用户传达统一的品牌形象。</p>
+                <p>当然，严格而精细的设计规范在不注重设计的团队中坚持推行却并不容易，需求的变化速度、前端同学的脾气、领导的审美水平……
+				等等很多因素会造成一套UI规范的推行无疾而终。不过，在规模过小的团队中，甚至设计师只有一个人的情况下，UI设计规范是否必要、
+				甚至是否会影响工作效率，则确实需要设计师自己进行斟酌。</p>
+                <h3 id="spy1-3">1.3 设计规范的内容</h3>
+                <p>
+                    <b>（1）移动端的UI设计规范（主要指原生应用）：</b><br>
+                      A.需要指明尺寸适配的屏幕是2x屏还是3x屏（1x屏现在已经很少见了）。<br>
+                      B.切图要注意点击区域，可以连同点击区域一起切图，避免点击区域过小（对iOS，所有点击区域不能小于88px）。<br>
+                      C. Android开发中需要.9.png格式的特殊切图，即对普通png扩大画布大小，上下左右四周各留1像素，并将最外围的一圈像素涂成
+					  纯黑。<br>
+                      D. 考虑手势的效果。
+                </p>
+                <p>
+                        <b>（2）H5页面的UI设计规范：</b><br>
+                      A. 有别于原生应用，需要考虑多尺寸屏幕适配的布局规范和响应性问题，例如布局变化的临界点、栅格设计等。<br>
+                      B. 手势操作设计应避免使用与浏览器本身有冲突的操作，减少手势操作。<br>
+                      C. 样式尽量与原生控件风格一致。
+                </p>
+                <p>
+                    <b>（3）Web端的UI设计规范：主要区别在于需要指定控件的悬停效果，且无需考虑复杂的手势效果。另外，同样需要考虑不同分
+					辨率下的布局规范。</b>
+                </p>
+<!-- 2.基础元素 { -->
+                <h1 class="tac m10 fc-blu">2.基础元素规范</h1>
+                <hr>
+                <h3 id="spy2-1">2.1-颜色</h3>
+                    <div class="tac"><img src="images/ui-color.png" height="660" width="460" class="m20-a bs-10"></div>
+                    <h4>2.1.1 主色调<sub>体现品牌色调，视觉重点或内容重点应使用此颜色</sub></h4>
+                        <div class="p10-50 ml100">
+                            <a class="btn btn-x">#008ad2</a>　<span class="fc-blu">文字效果</span>
+                        </div>
+                        <div class="tac mb20">
+                            <h4 class="p10 m20 bgc-f6">案例演示</h4>
+                            <img src="images/color-logo.png" height="141" width="351" class="bs-10" alt="案例1">
+                        </div>
+                        <hr>
+                    <h4>2.1.2 辅助色：相近色<sub>一般与主色调配合使用</sub></h4>
+                        <div class="p10-50 ml100">
+                            <a class="btn-x bgc-bluS">#41afe8</a>　<a class="btn-x bgc-bluX">#004b91</a>　<a 
+							class="btn-x">#004b91</a><br><br>
+                            <span class="fc-bluS">文字效果</span>　<span class="fc-blu-x">文字效果</span>　<span class="fc-bluS">
+							文字效果</span>　<span class="fc-blu-x">文字效果</span>　<span class="fc-bluS">文字效果</span>　
+							<span class="fc-blu-x">文字效果</span>
+                        </div>
+                    <h4>2.1.3 辅助色：强调色<sub>配合场景进行强调使用</sub></h4>
+                        <div class="p10-50 ml100">
+                            <a class="btn btn-x bgc-grn">#5cb85c</a>　<a class="btn btn-x bgc-org">#fa870a</a>　<a class="btn 
+							btn-x bgc-red">#d9534f</a><br><br>
+                            <span class="fc-grn">文字效果</span>　<span class="fc-org">文字效果</span>　<span class="fc-red">文字
+							效果</span>　<span class="fc-grn">文字效果</span>　<span class="fc-org">文字效果</span>　<span 
+							class="fc-red">文字效果</span>
+                        </div>
+                    <h4>2.1.4 中间色<sub>使用范围比较范：文字、边框、背景色都可，尽量避免大幅色块使用，如需强调参考强调色
+					</sub></h4>
+                        <div class="p10-50 ml100">
+                            <a class="btn btn-x" style="background:#333">#333333</a>　<a class="btn btn-x" 
+							style="background:#666">#666666</a>　<a class="btn btn-x" 
+							style="background:#999">#999999</a><br><br>
+                            <a class="btn btn-x fc9" style="background:#ddd">#dddddd</a>　<a class="btn btn-x fc9" 
+							style="background:#e6e6e6">#e6e6e6</a>　<a class="btn btn-x fc9" 
+							style="background:#f6f6f6">&nbsp;#f6f6f6&nbsp;</a>
+                        </div>
+                <h3 id="spy2-2">2.2-字体</h3>
+                    <h4>2.2.1 字体：标题</h4>
+                        <div class="m10-a p20 bgc-f6 w80p fc3">
+                            <h1>这是 h1 测试效果；默认字体：36px</h1>
+                            <h2>这是 h2 测试效果；默认字体：30px</h2>
+                            <h3>这是 h3 测试效果；默认字体：24px</h3>
+                            <h4>这是 h4 测试效果；默认字体：16px</h4>
+                            <h5>这是 h5 测试效果；默认字体：14px</h5>
+                            <h6>这是 h6 测试效果；默认字体：12px</h6>
+                        </div>
+                    <h4>2.2.2 字体：文字大小</h4>
+                        <div class="m10-a p20 bgc-f6 w80p fc3">
+                            <div class="fz36">这是字体：36px</div>
+                            <div class="fz30">这是字体：30px</div>
+                            <div class="fz24">这是字体：24px</div>
+                            <div class="fz18">这是字体：18px</div>
+                            <div class="fz16">这是字体：16px</div>
+                            <div class="fz14">这是字体：14px</div>
+                            <div class="fz12">这是字体：12px</div>
+                        </div>
+                    <h4>2.2.3 字体：文字连接</h4>
+                        <div class="p10-50">
+                            <p>默认<b>a</b>连接效果演示：</p>
+                            <div class="m10-a p20 bgc-f6 w80p">
+                                <a href="##">默认a连接演示</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">默认a连接演示</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">默认a连接演示</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                            <p>带下划线<b>a</b>演示：</p>
+                            <div class="m10-a p20 bgc-f6 w80p">
+                                <a href="##" class="a-u">带下划线a连接演示</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##" class="a-u">带下划线a连接演示</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##" class="a-u">带下划线a连接演示</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                           <p>带删除线<b>a</b>演示：</p>
+                            <div class="m10-a p20 bgc-f6 w80p">
+                                <a href="##" class="a-t">带下划线a连接演示</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##" class="a-t">带下划线a连接演示</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##" class="a-t">带下划线a连接演示</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                           <p>站外连接<b>a</b>演示：</p>
+                            <div class="m10-a p20 bgc-f6 w80p">
+                                <a href="##" target="_blank" class="a-out">站外连接</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##" target="_blank" class="a-out">站外连接</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##" target="_blank" class="a-out">站外连接</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                            <p>有底色<b>a</b>演示：</p>
+                            <div class="m10-a p20 bgc-blu w80p">
+                                <a href="##" class="a-f">有底色a连接演示</a>　　　<a href="##" class="a-f a-u">有底色下划线a连接
+								</a>　　　<a href="##" class="a-f a-t">有底色删除a连接</a>　　　<a href="##" class="a-f a-out">有底
+								色站外a连接</a>
+                            </div>
+                        </div>
+                    <h4>2.2.4 字体：文字类型</h4>
+                        <div class="p10-50">
+                            <p>常用字体类型包含：<b>Arial</b>，<b>Tahoma</b>，<b>Verdana</b>，<b>Microsoft Yahei</b>，对应
+							样式为：<mark>.ffa</mark>，<mark>.fft</mark>，<mark>.ffv</mark>，<mark>.ffy</mark>，效果演示如下
+							：</p>
+                            <div class="m10-a p20 bgc-f6 w80p fc6 fz18">
+                                <div class="ffa">1234567　abcdefg　HIGHKLMM “Arial”字体演示</div>
+                                <div class="fft">1234567　abcdefg　HIGHKLMM “Tahoma”字体演示</div>
+                                <div class="ffv">1234567　abcdefg　HIGHKLMM “Verdana”字体演示</div>
+                                <div>1234567　abcdefg　HIGHKLMM 默认字体演示</div>
+                                <div class="ffy">1234567　abcdefg　HIGHKLMM “Microsoft Yahei”字体演示</div>
+                            </div>
+                        </div>
+                    <h4>2.2.5 字体：段落</h4>
+                        <div class="p10-50">内容展示</div>
+                    <h4>2.2.6 字体：系统字体图标</h4>
+                        <div class="p10-50">内容展示</div>
+
+                <h3 id="spy2-3">2.3-按钮</h3>
+                    <p>内容介绍</p>
+                <h3 id="spy2-4">2.4-表格</h3>
+                    <p>内容介绍</p>
+                <h3 id="spy2-5">2.5-表单</h3>
+                    <p>内容介绍</p>
+                <h3 id="spy2-6">2.6-图片</h3>
+                    <p>内容介绍</p>
+                <h3 id="spy2-7">2.7-媒体</h3>
+                    <p>内容介绍</p>
+<!-- 3.组件 { -->
+                <h1 class="tac m10 fc-blu">3.组件规范</h1>
+                <hr>
+                <h3 id="spy3-1">3.1-导航栏</h3>
+                <p>内容介绍</p>
+            </div>
+            <!-- } 左栏 -->
+            <!-- 右侧：快速导航 { -->
+            <div class="col-2 p10 fcc spy" data-spy-target=".spy-div">
+                <h4>1.Ui规范介绍</h4>
+                <ul class="p10">
+                    <li><a href="#spy1-1">1.1 UI设计规范是什么</a></li>
+                    <li><a href="#spy1-2">1.2 设计规范的价值</a></li>
+                    <li><a href="#spy1-3">1.3 设计规范的内容</a></li>
+                </ul>
+                <h4>2.基础元素</h4>
+                <ul class="p10">
+                    <li><a href="#spy2-1">2.1-颜色</a></li>
+                    <li><a href="#spy2-2">2.2-字体</a></li>
+                    <li><a href="#spy2-3">2.3-按钮</a></li>
+                    <li><a href="#spy2-4">2.4-表格</a></li>
+                    <li><a href="#spy2-5">2.5-表单</a></li>
+                    <li><a href="#spy2-6">2.6-图片</a></li>
+                    <li><a href="#spy2-7">2.7-媒体</a></li>
+                </ul>
+                <h4>3.组件</h4>
+                <ul class="p10">
+                    <li><a href="#spy3-1">3.1-导航栏</a></li>
+                </ul>
+            </div>
+        </div><br>
+
+    </div>
+<!-- } docEnd | script  -->
+<script src="js/jquery.min.js"></script>
+<script src="js/libJS.js"></script>
+<script>
+    $(".spy").pin();
+    $(".spy li a").click(function() {$(".spy li").removeClass('on');$(this).parent().addClass('on');});
+    $(".spy li a").zxxAnchor({anchortag: "href"});
+</script>
+<!-- } script -->
+</body>
+</html>
